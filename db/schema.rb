@@ -10,16 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_044104) do
+ActiveRecord::Schema.define(version: 2021_09_28_114608) do
 
   create_table "certs", charset: "utf8mb4", force: :cascade do |t|
     t.string "full_name"
     t.string "id_number"
     t.string "company_name"
     t.string "business_id"
+    t.string "sub_county"
+    t.string "ward"
     t.string "examined_at"
     t.string "lab_ref_number"
     t.string "expiry_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "demographics", charset: "utf8mb4", force: :cascade do |t|
+    t.string "subCountyCode"
+    t.string "countyCode"
+    t.string "countyName"
+    t.string "subCountyName"
+    t.string "wardCode"
+    t.string "wardName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
