@@ -32,3 +32,10 @@ production:
 #  host: 10.20.2.13
 #  username: biller_api
 #  password: Collection@pay2019
+
+#  adapter: mysql2
+#  host: 10.20.2.9
+#  username: api_test
+#  password: Collection@pay2019
+#  pool: <%#= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  timeout: 5000
