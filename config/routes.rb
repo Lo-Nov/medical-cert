@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  resources :hygienes
   resources :certs
   # resources :users, param: :_username
   resources :users
 
   # print cert
   get '/print/cert/:id_number', to: 'certs#printcert'
+  get '/print/food/hygiene/cert/:business_id', to: 'hygienes#hygiene'
 
   # get all income types
   get '/income_type', to: 'certs#income_type'
