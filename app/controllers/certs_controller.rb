@@ -15,11 +15,13 @@ class CertsController < ApplicationController
 
   def printcert
     @cert = Cert.find_by_id_number(params[:id_number])
+
     if @cert
-    render json: { status: '200', message: 'Certs found', data: @cert }, status: :ok
+      render json: { status: '200', message: 'Cert found', data: @cert }, status: :ok
     else
       render json: { status: '400', message: 'Cert not found', data: @cert }, status: :unprocessable_entity
     end
+  end
 
   # GET /cert/{id}
   def show
