@@ -15,13 +15,15 @@ class CertsController < ApplicationController
 
   def printcert
     @cert = Cert.find_by_id_number(params[:id_number])
+    if @cert
     render json: { status: '200', message: 'Certs found', data: @cert }, status: :ok
-
-  end
+    else
+      render json: { status: '400', message: 'Cert not found', data: @cert }, status: :unprocessable_entity
+    end
 
   # GET /cert/{id}
   def show
-    render json: { status: '200', messagge: 'Certs found', data: @cert }, status: :ok
+    render json: { status: '200', message: 'Certs found', data: @cert }, status: :ok
   end
 
   # call external api
@@ -84,7 +86,8 @@ class CertsController < ApplicationController
   end
 
   def cert_params
-    params.permit(:full_name, :id_number, :company_name, :business_id, :examined_at, :lab_ref_number, :expiry_date,
+    params.require(:cert)
+          .permit(:full_name, :id_number, :company_name, :business_id, :examined_at, :lab_ref_number, :expiry_date,
                   :sub_county, :ward)
   end
 end
