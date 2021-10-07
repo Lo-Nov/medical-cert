@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_05_095339) do
+ActiveRecord::Schema.define(version: 2021_10_05_111418) do
 
   create_table "certs", charset: "utf8mb4", force: :cascade do |t|
     t.string "full_name"
@@ -26,6 +26,22 @@ ActiveRecord::Schema.define(version: 2021_10_05_095339) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "fires", charset: "utf8mb4", force: :cascade do |t|
+    t.string "business_name"
+    t.string "business_id"
+    t.string "plot_number"
+    t.string "street"
+    t.string "regitration_number"
+    t.string "vehicle_type"
+    t.string "inpection_date"
+    t.string "certification_date"
+    t.string "sub_county"
+    t.string "ward"
+    t.string "expiry_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "hygienes", charset: "utf8mb4", force: :cascade do |t|
     t.string "full_name"
     t.string "business_id"
@@ -33,6 +49,8 @@ ActiveRecord::Schema.define(version: 2021_10_05_095339) do
     t.string "lr_number"
     t.string "physical_address"
     t.string "nuture_of_business"
+    t.string "amount"
+    t.string "receipt_number"
     t.string "sub_county"
     t.string "ward"
     t.string "expiry_date"

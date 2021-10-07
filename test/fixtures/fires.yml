@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business_name: MyString
+  business_id: MyString
+  plot_number: MyString
+  street: MyString
+  regitration_number: MyString
+  vehicle_type: MyString
+  inpection_date: MyString
+  certification_date: MyString
+  expiry_date: MyString
+
+two:
+  business_name: MyString
+  business_id: MyString
+  plot_number: MyString
+  street: MyString
+  regitration_number: MyString
+  vehicle_type: MyString
+  inpection_date: MyString
+  certification_date: MyString
+  expiry_date: MyString

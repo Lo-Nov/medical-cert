@@ -4,6 +4,7 @@ class Hygiene < ApplicationRecord
 
   validates :full_name, presence: true
   validates :business_id, presence: true
+  validates :receipt_number, presence: true, uniqueness: true
 
   def set_expiry_date
     self.expiry_date = Date.today + 364.days

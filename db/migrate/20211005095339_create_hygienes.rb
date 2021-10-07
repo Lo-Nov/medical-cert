@@ -7,10 +7,11 @@ class CreateHygienes < ActiveRecord::Migration[6.1]
       t.string :lr_number
       t.string :physical_address
       t.string :nuture_of_business
+      t.string :amount
+      t.string :receipt_number
       t.string :sub_county
       t.string :ward
       t.string :expiry_date
-
       t.timestamps
     end
   end

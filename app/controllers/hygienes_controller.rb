@@ -41,7 +41,7 @@ class HygienesController < ApplicationController
   #
   def food_hygiene_certificate_params
     params.require(:hygiene)
-          .permit(:full_name, :plot_number, :lr_number, :business_id, :physical_address, :nuture_of_business, :expiry_date,
+          .permit(:full_name, :plot_number, :lr_number, :business_id, :receipt_number, :amount, :physical_address, :nuture_of_business, :expiry_date,
                   :sub_county, :ward)
   end
 end
