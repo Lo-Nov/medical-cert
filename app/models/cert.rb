@@ -8,6 +8,6 @@ class Cert < ApplicationRecord
 
 
   def set_expiry_date
-    self.expiry_date = Date.today + 182.days
+    self.expiry_date = Date.today + 181.days
   end
 end

@@ -3,6 +3,8 @@ class CreateFires < ActiveRecord::Migration[6.1]
     create_table :fires do |t|
       t.string :business_name
       t.string :business_id
+      t.string :phone
+      t.string :email
       t.string :plot_number
       t.string :street
       t.string :regitration_number

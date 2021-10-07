@@ -37,6 +37,6 @@ class FiresController < ApplicationController
   def fire_prevention_params
     params.require(:fire)
           .permit(:business_name, :business_id, :plot_number, :street, :regitration_number, :vehicle_type,
-                  :inpection_date, :certification_date, :expiry_date, :sub_county, :ward)
+                  :inpection_date, :certification_date, :phone, :email, :sub_county, :ward)
   end
 end

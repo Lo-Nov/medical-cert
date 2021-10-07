@@ -89,7 +89,7 @@ class CertsController < ApplicationController
 
   def cert_params
     params.require(:cert)
-          .permit(:full_name, :id_number, :company_name, :business_id, :examined_at, :lab_ref_number, :expiry_date,
+          .permit(:full_name, :id_number, :company_name, :phone, :business_id, :examined_at, :lab_ref_number,
                   :sub_county, :ward)
   end
 end

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # print cert
   get '/print/cert/:id_number', to: 'certs#printcert'
   get '/print/food/hygiene/cert/:business_id', to: 'hygienes#hygiene'
-  get '/print/fire/prevention/cert/:business_id', to: 'hygienes#fire'
+  get '/print/fire/prevention/cert/:business_id', to: 'fires#fire'
 
   # get all income types
   get '/income_type', to: 'certs#income_type'

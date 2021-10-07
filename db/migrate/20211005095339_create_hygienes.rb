@@ -4,6 +4,8 @@ class CreateHygienes < ActiveRecord::Migration[6.1]
       t.string :full_name
       t.string :business_id
       t.string :plot_number
+      t.string :phone
+      t.string :email
       t.string :lr_number
       t.string :physical_address
       t.string :nuture_of_business
