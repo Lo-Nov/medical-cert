@@ -1,7 +1,7 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  config.hosts << "afya.revenuesure.co.ke" # Whitelist one hostname
+  config.hosts << 'afya.revenuesure.co.ke' # Whitelist one hostname
   config.hosts << /application\.local\Z/ # Whitelist a test domain
 
   
@@ -85,7 +85,7 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
