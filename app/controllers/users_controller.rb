@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-    render json: @users, status: :ok
+
+    if @users
+      render json: { status: '200', message: 'Users found', data: @users }, status: :ok
+    else
+      render json: { status: '422', message: user.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   # GET /users/{username}
