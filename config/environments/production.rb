@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.hosts << "afya.biller.co.ke" # Whitelist one hostname
+  config.hosts << "afya.revenuesure.co.ke" # Whitelist one hostname
   config.hosts << /application\.local\Z/ # Whitelist a test domain
 
   
